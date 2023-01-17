@@ -16,14 +16,27 @@ actor{
     public func volume( n : Nat) : async Nat{
         vol := n * n * n;
         return vol;
-    }
+    };
 
 
 //3. Write a function hours_to_minutes that takes a number of hours n and returns the number of minutes.
+    var minutes : Nat = 0;
 
+    public func hours_to_minutes(h : Nat) : async Nat {
+        minutes := h * 60;
+        return minutes;
+    };
 //4. Write two functions set_counter & get_counter.
 // - set_counter sets the value of counter to n.
 // - get_counter returns the current value of counter.
+    var counter : Nat = 0;
+    public func set_counter(n : Nat) : async (){
+        counter := n;
+    };
+
+    public query func get_counter() : async Nat{
+        return counter;
+    };
 
 //5. Write a function test_divide that takes two natural numbers n and m and returns a boolean indicating if n divides m.
 
