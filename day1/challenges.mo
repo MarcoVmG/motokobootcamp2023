@@ -39,9 +39,31 @@ actor{
     };
 
 //5. Write a function test_divide that takes two natural numbers n and m and returns a boolean indicating if n divides m.
+    var isDiv : Bool = false;
+  
+    public func test_divide(n : Nat, m : Nat) : async Bool {
+        if(m % n == 0){
+            isDiv := true;
+        }else {
+            isDiv := false;
+        };
+        return isDiv;
+        
+    };
 
 //6. Write a function is_even that takes a natural number n and returns a boolean indicating if n is even.
+    var isEven : Bool = false;
 
+    public func is_even(n : Nat) : async Bool{
+
+        if(n % 2 == 0){
+            isEven := true;
+        }else {
+            isEven := false;
+        };
+
+        return isEven
+    };
 
 
 }
