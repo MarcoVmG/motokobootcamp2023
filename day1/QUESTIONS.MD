@@ -1,5 +1,5 @@
 1. How mush is the current capacity canister?
-    The actual capacity of a canister is 4GB,  but there is also a work on on increasing in a future the capacity up to 300 GB with a new system API. But in Dicember 2022, a proposal was approved (Proposal: 92573 - IC Dashboard) that increase the canister capacity to 48 GiB per cansiter.
+    The actual capacity of a canister is 4GB,  but there is also a work on on increasing in a future the capacity up to 300     GB with a new system API. But in Dicember 2022, a proposal was approved (Proposal: 92573 - IC Dashboard) that increase     the canister capacity to 48 GiB per cansiter.
 
 2. What is the issue with the following code sample?
 
