@@ -1,3 +1,6 @@
+import Array "mo:base/Array";
+import Text "mo:base/Text";
+import Nat "mo:base/Nat";
 actor{
 //1. Write a function average_array that takes an array of integers and returns the average value of the elements in the array.
     var sum : Int = 0;
@@ -35,6 +38,26 @@ actor{
 
 
 //6. Write a function convert_to_binary that takes a natural number n and returns a string representing the binary representation of n.
+    var binary : [Nat] = [];
+    var binary_string : Text = "";
+    public func nat_to_binary(n : Nat) : async Text {
+        var number : Nat = n;
+        var n_rest : Nat = 1;
+        while(n_rest > 0){
+            if(number % 2 == 0){
+                binary := Array.append<Nat>(binary,[0]);
+            }else{
+                binary := Array.append<Nat>(binary,[1]);
+            };
+            n_rest := number /2;
+            number := n_rest;
+        };
+        binary := Array.reverse(binary);
 
+        for(item in binary.vals()) {
+            binary_string := Text.concat(binary_string,Nat.toText(item));
+        };
+    return binary_string;  
+  };
 
 }
