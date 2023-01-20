@@ -12,5 +12,5 @@ actor{
         };
 
         return new_book;
-    }   
+    }; 
 }
